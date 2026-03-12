@@ -11,20 +11,54 @@
   font-style: normal;
 }
 
+#page {
+  width: 95%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 body {
   background-color: #F6F6F6;
+  margin: 0;
+  padding: 0;
 }
+
+#ano{
+  padding: 0;
+}
+
+#dev {
+  padding: 0;
+  margin: 0;
+}
+
 
 #main {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1368px;
+}
+
+#texto {
+  width: 100%;
+  max-width: 450px;
+}
+
+#textoMenor{
+  display: flex;
+  justify-content: space-between;
 }
 
 #illustration {
-  width: 450PX;
-  padding-right: 193px;
-  margin-top: 124px;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 5em;
   transition: transform 1s;
 }
 
@@ -39,8 +73,7 @@ p {
 }
 
 h1 {
-  font-size: 220PX;
-  margin-left: 108px;
+  font-size: 13rem;
   margin-bottom: 35px;
   font-family: "Koulen", sans-serif;
   line-height: 80%;
@@ -49,7 +82,8 @@ h1 {
 }
 
 h2 {
-  font-size: 64px;
+  white-space: nowrap;
+  font-size: 4rem;
   color: #990100;
   font-family: "Koulen", sans-serif;  
   line-height: 80%;
@@ -58,13 +92,18 @@ h2 {
 }
 
 a {
-  font-size: 24px;;
+  white-space: nowrap;
+  font-size: 1.1rem;;
   font-family: "Lexend", sans-serif;
   font-weight:bold;
   color: #990100;
   text-decoration: none;
   background-color: #D9D9D9;
-  padding: 29px 185px 16px 27px;
+  padding: 29px 136px 16px 29px;
+  width: 90%;
+  height: 90%;
+  max-width: 98px;
+  max-height: 85px;
   border: 20px;
   border-style: solid;
   border-color: #990100;
@@ -76,36 +115,52 @@ a:hover{
   color: #333333;
 }
 
+#buttons {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1368px;
+}
+
 #buttons h2 {
-  margin-left: 108px;
+  text-align: left;
 }
 
 #link {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 248px;
+  width: 90%;
+  max-width: 1322.22222222px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 25px;
+  margin-bottom: 25vh;
 }
 
 #sobre {
-  padding-left: 108px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1368px;
 }
 
 #sobremim {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
   justify-content: space-between;
   margin: 0 auto;
 }
 
 #sobremim p {
-  width: 617px;
+  font-size: 1.2rem;
+  width: 90%;
+  max-width: 615px;
   margin-top: 0px;
 }
 
 #sobremim img {
-  margin-right: 108px;
   border-radius: 100%;
-  width: 450px;
+  width: 90%;
+  max-width: 430px;
   transition: transform 0.3s;
 }
 
@@ -116,43 +171,77 @@ a:hover{
 #listaProjetos{
   display: flex;
   align-items: center;
-  gap: 30px;
+  flex-direction: wrap;
   overflow-x: auto;
+  gap: 10px;
   margin-bottom: 70px;
 }
 
 .projetoCard{
   background-color: #333333;
   min-width: 400px;
-  width: 400px;
+  width: 90%;
+  max-width: 450px;
   height: 300px;
 }
 
 #projetos{
-  margin-left: 108px;
-}
-
-span + span {
-  padding: 0xp;
-  margin-left: 126px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1368px;
 }
 
 span {
   font-size: 26px;
-  padding-left: 108px;
   font-family: "Lexend", sans-serif;
   font-weight: lighter;
   color: #990100;
 }
 
-#contatos h2 {
-  margin-left: 108px;
+#contatos {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1368px;
 }
 
 .divider {
-  margin: 133px auto;
-  width: 80%;
+  margin: 100px auto;
+  width: 90%;
+  max-width: 1168px;
   height: 2px;
   background-color: #990100;
 }
 
+@media (max-width: 768px) {
+
+  #sobremim {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h2{
+    font-size: 6rem;
+    text-align: center;
+  }
+
+  #buttons h2 {
+    text-align: center;
+  }
+
+  #main {
+    justify-content: center;
+  }
+
+  #buttons {
+    justify-content: center;
+  }
+
+  #link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+}
